@@ -1,0 +1,19 @@
+{
+  "name": "itch-custom-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "parcel": "parcel",
+    "dev": "parcel serve template.html --public-url /",
+    "build": "parcel build template.html game.html --no-source-maps --no-content-hash && rm dist/template.html && mv dist/game.*.css dist/game.css"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "posthtml-expressions": "^1.7.1",
+    "posthtml-include": "^1.6.0",
+    "posthtml-modules": "^0.6.4",
+    "posthtml-sugarml": "^1.0.0-alpha3",
+    "sass": "^1.32.2"
+  }
+}
