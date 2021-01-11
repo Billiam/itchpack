@@ -9,8 +9,11 @@
     "build": "parcel build template.html game.html --no-source-maps --no-content-hash && mv dist/game.*.css dist/game.css"
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-css-url-loader": "^1.0.5",
+    "postcss": "^8.2.4",
+    "postcss-modules": "^3.2.2",
     "posthtml-expressions": "^1.7.1",
     "posthtml-include": "^1.6.0",
     "posthtml-modules": "^0.6.4",
