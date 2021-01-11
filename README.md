@@ -5,8 +5,9 @@ Preview and preprocessor for Itch.io game custom HTML and CSS.
 ## Features
 
 * Preview with live update
-* Prefix HTML classes with `custom-` and minify
+* Prepend HTML classes with `custom-` and minify
 * Preprocess SCSS
+* CSS vendor autoprefixing
 * Base64 encode CSS images
 
 ## Usage
