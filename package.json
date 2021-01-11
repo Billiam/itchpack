@@ -10,11 +10,13 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-css-url-loader": "^1.0.5",
     "posthtml-expressions": "^1.7.1",
     "posthtml-include": "^1.6.0",
     "posthtml-modules": "^0.6.4",
-    "posthtml-prefix-class": "billiam/posthtml-prefix-class#10c7f0e",
+    "posthtml-prefix-class": "billiam/posthtml-prefix-class#10c7f0ecc6641b806f90d7623bee184234ef45b5",
     "posthtml-sugarml": "^1.0.0-alpha3",
     "sass": "^1.32.2"
-  }
+  },
+  "dependencies": {}
 }

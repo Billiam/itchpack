@@ -7,6 +7,7 @@ Preview and preprocessor for Itch.io game custom HTML and CSS.
 * Preview with live update
 * Prefix HTML classes with `custom-` and minify
 * Preprocess SCSS
+* Base64 encode CSS images
 
 ## Usage
 
@@ -18,3 +19,8 @@ Preview and preprocessor for Itch.io game custom HTML and CSS.
 6. Make edits to `game.html` and `game.scss`
 7. When finished, run `yarn build` and copy the output of
    `dist/game.html` and `dist/game.css` to your itch page.
+   
+## TODO
+
+* Support gamejam and profile pages
+* Download and process live itch pages instead of templating a versioned file
