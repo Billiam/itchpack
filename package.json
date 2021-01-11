@@ -6,13 +6,14 @@
   "scripts": {
     "parcel": "parcel",
     "dev": "parcel serve template.html --public-url /",
-    "build": "parcel build template.html game.html --no-source-maps --no-content-hash && rm dist/template.html && mv dist/game.*.css dist/game.css"
+    "build": "parcel build template.html game.html --no-source-maps --no-content-hash && mv dist/game.*.css dist/game.css"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "posthtml-expressions": "^1.7.1",
     "posthtml-include": "^1.6.0",
     "posthtml-modules": "^0.6.4",
+    "posthtml-prefix-class": "billiam/posthtml-prefix-class#10c7f0e",
     "posthtml-sugarml": "^1.0.0-alpha3",
     "sass": "^1.32.2"
   }
