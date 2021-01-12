@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-css-url-loader": "^1.0.5",
+    "postcss": "^8.2.4",
+    "postcss-modules": "^3.2.2",
+    "posthtml-include": "^1.6.0",
+    "posthtml-modules": "^0.6.4",
+    "posthtml-prefix-class": "billiam/posthtml-prefix-class#10c7f0ecc6641b806f90d7623bee184234ef45b5",
+    "sass": "^1.32.2"
+  }
+}

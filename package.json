@@ -1,25 +1,14 @@
 {
-  "name": "itch-custom",
+  "name": "itchpack",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
-  "bin": {
-    "scr": "./bin/fetch-template.js"
-  },
+  "bin": "./index.js",
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "js-beautify": "^1.13.2",
     "node-html-parser": "^2.0.2",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-css-url-loader": "^1.0.5",
-    "postcss": "^8.2.4",
-    "postcss-modules": "^3.2.2",
-    "posthtml-include": "^1.6.0",
-    "posthtml-modules": "^0.6.4",
-    "posthtml-prefix-class": "billiam/posthtml-prefix-class#10c7f0ecc6641b806f90d7623bee184234ef45b5",
-    "sass": "^1.32.2",
     "sywac": "^1.3.0"
   }
 }

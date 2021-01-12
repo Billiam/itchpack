@@ -7,6 +7,7 @@ const chalk = require('chalk')
 const sywac = require('sywac')
 const install = require('./lib/install')
 const template = require('./lib/template')
+const proxy = require('./lib/proxy')
 
 const cli = sywac.command('setup', {
   desc: 'Install config files, create templates from an Itch.io project, profile, or jam URL',
@@ -35,13 +36,12 @@ const cli = sywac.command('setup', {
     sywac.number(chalk`{green -p, --port} {blue <number>}`, { desc: 'Development server port', defaultValue: 1234 })
   },
   run (argv, context) {
-    console.log('got serve', argv)
-    console.log(context)
+    proxy.serve(argv.port)
   }
 }).command('build', {
   desc: 'Compile custom html and scss',
   run (argv, context) {
-    console.log('got build', argv)
+    proxy.build()
   }
 }).help('-h, --help')
   .style({
@@ -60,34 +60,3 @@ async function main () {
 }
 
 if (require.main === module) main()
-//
-// const options = yargs(hideBin(process.argv))
-//   .updateStrings({
-//     'Positionals:': chalk.blue('Positionals:'),
-//     'Options:': chalk.blue('Options:'),
-//     'Examples:': chalk.blue('Examples:')
-//   })
-//   .usage('Usage: $0 <command> [options]')
-//   .help('h')
-//   .alias('h', 'help')
-//   .command('setup <url>', 'Install config files, create templates from project, profile, or jam URL', function(yargs) {
-//     return yargs.example('$0 setup https://yourname.itch.io/project-name')
-//       .positional('url', {
-//         describe: 'URL to fetch template and content from',
-//         type: 'string'
-//       }).wrap(null)
-//       .argv
-//   }, function (installArgs) {
-//   })
-//   .command('template', 'Fetch template from your itch page', function (yargs) {
-//     return yargs.example('$0 template -t game -u https://yourname.itch.io/project-name')
-//       .alias('t', 'type')
-//       .alias('u', 'url')
-//       .describe('t', 'Type of page being fetched (one of: [game, gamejam, profile])')
-//       .describe('u', 'URL of page to fetch')
-//       .wrap(null)
-//       .argv
-//   }, function(template_args) {
-//
-//   }).argv
-
