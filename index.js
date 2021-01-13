@@ -1,12 +1,7 @@
 #!/usr/bin/env node
 
-const URL = require("url").URL;
-const fs = require('fs')
 const chalk = require('chalk')
-
 const sywac = require('sywac')
-const template = require('./lib/template')
-const proxy = require('./lib/proxy')
 
 const cli = sywac.command('setup', {
   desc: 'Create templates from an Itch.io project, profile, or jam URL',
@@ -15,6 +10,7 @@ const cli = sywac.command('setup', {
       .check((argv, ctx) => {
         if (argv.url) {
           try {
+            const URL = require("url").URL
             const url = new URL(argv.url)
             if (! (/(^|\.)itch\.io$/.test(url.host) && ['https:', 'http:'].includes(url.protocol))) {
               ctx.cliMessage(chalk`{red ${argv.url} is not a valid itch.io url}`)
@@ -26,7 +22,7 @@ const cli = sywac.command('setup', {
       })
   },
   run (argv, context) {
-    template(argv.url)
+    require('./lib/template')(argv.url)
   }
 }).command('serve', {
   desc: 'Run local development server',
@@ -34,12 +30,12 @@ const cli = sywac.command('setup', {
     sywac.number(chalk`{green -p, --port} {blue <number>}`, { desc: 'Development server port', defaultValue: 1234 })
   },
   run (argv, context) {
-    proxy.serve(argv.port)
+    require('./lib/proxy').serve(argv.port)
   }
 }).command('build', {
   desc: 'Compile custom html and scss',
   run (argv, context) {
-    proxy.build()
+    require('./lib/proxy').build()
   }
 }).help('-h, --help')
   .style({
