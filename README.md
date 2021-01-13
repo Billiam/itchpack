@@ -12,16 +12,10 @@ Preview and preprocessor for Itch.io game custom HTML and CSS.
 
 ## Usage
 
-1. Clone repository
-2. Install dependencies with yarn: `yarn install`
-3. [optional] Update `template_vars.json` with your game and user information.
-4. Update the `--itchio_` css variables in `template.html` to match yours
-5. Run `yarn dev` and visit `localhost:1234`
-6. Make edits to `game.html` and `game.scss`
-7. When finished, run `yarn build` and copy the output of
-   `dist/game.html` and `dist/game.css` to your itch page.
-   
-## TODO
-
-* Support gamejam and profile pages
-* Download and process live itch pages instead of templating a versioned file
+1. Install the command globally `npm i -g <this-package>`
+2. In the directory where you'd like to manage your files, run: 
+   `<this-package> setup https://yourname.itch.io/yourproject`
+3. Run `<this-package> serve` to start the development server.
+4. Edit your `custom.html` and `custom.scss` files. Preview will live-reload.
+5. When done, run `<this-package> build`, and copy the compiled content of `output/custom.html` and `output/custom.css`
+ to your itch.io game page.

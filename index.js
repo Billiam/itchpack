@@ -5,12 +5,11 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 const sywac = require('sywac')
-const install = require('./lib/install')
 const template = require('./lib/template')
 const proxy = require('./lib/proxy')
 
 const cli = sywac.command('setup', {
-  desc: 'Install config files, create templates from an Itch.io project, profile, or jam URL',
+  desc: 'Create templates from an Itch.io project, profile, or jam URL',
   setup: sywac => {
     sywac.positional('<url>', { paramsDesc: 'Project, profile, or jam URL' })
       .check((argv, ctx) => {
@@ -27,7 +26,6 @@ const cli = sywac.command('setup', {
       })
   },
   run (argv, context) {
-    install()
     template(argv.url)
   }
 }).command('serve', {
