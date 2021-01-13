@@ -78,3 +78,7 @@ Start a local preview server with live reload and launch the default browser
 Generate `custom.html` and `custom.css` files in `dist` directory.
 
 These can be copied back to itch.io.
+
+#### options
+
+`--no-minify` [optional] Disable minification of output HTML and CSS

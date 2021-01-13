@@ -34,8 +34,14 @@ const cli = sywac.command('setup', {
   }
 }).command('build', {
   desc: 'Compile custom html and scss',
+  setup: sywac => {
+    sywac.boolean('--no-minify', {
+      desc: 'Disable CSS and HTML minification',
+      defaultValue: false
+    })
+  },
   run (argv, context) {
-    require('./lib/proxy').build()
+    require('./lib/proxy').build({ minify: !argv['no-minify'] })
   }
 }).help('-h, --help')
   .style({
