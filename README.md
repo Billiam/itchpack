@@ -4,7 +4,9 @@ Itchpack is a CLI compiler and preprocessor for custom HTML and CSS for
 Itch.io game, profile, and game jam pages.
 
 Fetch your page content and styles, develop offline with developer-friendly
-features like live preview, scss, browser autoprefix
+features like live preview, scss, css vendor autoprefixing.
+
+[![asciicast](https://asciinema.org/a/384341.svg)](https://asciinema.org/a/384341?speed=2&autoplay=1)
 
 ## Features
 
