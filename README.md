@@ -69,7 +69,8 @@ Start a local preview server with live reload and launch the default browser
 
 #### options
 
-`--port, -p` [optional] Server port (`default: 1234`)
+`--port, -p` [optional] Server port (`default: 1234`)  
+`--host, -h` [optional] Server host (`default: 127.0.0.1`)
 
 ---
 

@@ -27,10 +27,11 @@ const cli = sywac.command('setup', {
 }).command('serve', {
   desc: 'Run local development server',
   setup: sywac => {
-    sywac.number(chalk`{green -p, --port} {blue <number>}`, { desc: 'Development server port', defaultValue: 1234 })
+    sywac.string(chalk`{green -h, --host} {blue <hostname>}`, { desc: 'Development server host', defaultValue: '127.0.0.1' })
+      .number(chalk`{green -p, --port} {blue <number>}`, { desc: 'Development server port', defaultValue: 1234 })
   },
   run (argv, context) {
-    require('./lib/proxy').serve(argv.port)
+    require('./lib/proxy').serve(argv.host, argv.port)
   }
 }).command('build', {
   desc: 'Compile custom html and scss',
