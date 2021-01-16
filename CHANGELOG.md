@@ -1,11 +1,12 @@
 # Changelog
 
-## `1.2.1` 2020-01-16
+## `1.2.2` 2020-01-16
 
 * Workaround for webpack chained loading error when pug templates fail, etc.
 * Fix error when HTML doesn't include a nested template
 * Fix template downloading for game jams and profile pages
 * Enable hot module reload
+* Fix hot reloading breaking HTML/template/data reloading
 
 ## `1.2.0` 2020-01-15
 
