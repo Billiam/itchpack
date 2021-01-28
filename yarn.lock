@@ -4202,6 +4202,10 @@ sass-loader@^10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
+sass-planifolia@xi/sass-planifolia#2df9742:
+  version "0.6.0"
+  resolved "https://codeload.github.com/xi/sass-planifolia/tar.gz/2df9742b39c714bd74369dd45ff8a307cc203bd6"
+
 sass@^1.32.4:
   version "1.32.4"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.4.tgz#308bf29dd7f53d44ae4f06580e9a910ad9aa411e"
