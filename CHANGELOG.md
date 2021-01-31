@@ -1,5 +1,9 @@
 # Changelog
 
+## `1.2.4` 2020-10-31
+
+* Remove duplicated `-h` command from CLI
+
 ## `1.2.2` 2020-01-16
 
 * Workaround for webpack chained loading error when pug templates fail, etc.
